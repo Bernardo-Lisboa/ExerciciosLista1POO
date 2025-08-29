@@ -32,7 +32,9 @@ public class Ex10 {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (j+3<19) {
+                    //faz a comparação vertical primeiro
                     if(matriz[i][j]*matriz[i][j+1]*matriz[i][j+2]*matriz[i][j+3]>maiorProduto){
+                        //sempre que achar um produto maior ele bota nessa variavel
                         maiorProduto = matriz[i][j]*matriz[i][j+1]*matriz[i][j+2]*matriz[i][j+3];
                         elemento1=matriz[i][j];
                         elemento2=matriz[i][j+1];
@@ -41,6 +43,7 @@ public class Ex10 {
                     }
                 }
                 if (i+3<19) {
+                    //faz a comparação horizontal
                     if(matriz[i][j]*matriz[i+1][j]*matriz[i+2][j]*matriz[i+3][j]>maiorProduto){
                         maiorProduto = matriz[i][j]*matriz[i+1][j]*matriz[i+2][j]*matriz[i+3][j];
                         elemento1=matriz[i][j];
@@ -50,6 +53,7 @@ public class Ex10 {
                     }
                 }
                 if (i+3<19 && j+3<19) {
+                    //faz a comparação em diagonal da esquerda pra direita
                     if(matriz[i][j]*matriz[i+1][j+1]*matriz[i+2][j+2]*matriz[i+3][j+3]>maiorProduto){
                         maiorProduto = matriz[i][j]*matriz[i+1][j+1]*matriz[i+2][j+2]*matriz[i+3][j+3];
                         elemento1=matriz[i][j];
@@ -63,6 +67,7 @@ public class Ex10 {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = matriz[i].length - 1; j > 0; j--) {
                 if (j-3>=0 && i+3<19) {
+                    //faz a comparação em diagonal da direita pra esquerda
                     if(matriz[i][j]*matriz[i+1][j-1]*matriz[i+2][j-2]*matriz[i+3][j-3]>maiorProduto){
                         maiorProduto = matriz[i][j]*matriz[i+1][j-1]*matriz[i+2][j-2]*matriz[i+3][j-3];
                         elemento1=matriz[i][j];
