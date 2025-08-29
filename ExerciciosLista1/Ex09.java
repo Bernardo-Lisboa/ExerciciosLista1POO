@@ -18,7 +18,8 @@ public class Ex09 {
             }
             System.out.println();
         }
-        //Para usar o redirecionamento de saída precisamos primeiro compilar o codigo e depois rodar ele redirecionando a saida para um txt
-        //Por exemplo no terminal: "javac Ex09.java" e depois: "java Ex09 > matriz.txt"
+        //Para usar o redirecionamento de saída precisamos escrever no terminal: "./gradlew run > matriz.txt"
+        //ele cria um txt com a saida do programa, como se fosse no terminal 
     }
 }
+
